@@ -4,7 +4,12 @@
   "main": "dist/lib.cjs.js",
   "module": "dist/lib.esm.js",
   "browser": "dist/lib.umd.js",
-  "dependencies": {},
+  "dependencies": {
+    "@rollup/plugin-json": "^4.1.0",
+    "axios": "^0.21.1",
+    "dotenv": "^8.2.0",
+    "firebase": "^8.2.1"
+  },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^11.0.1",
     "@rollup/plugin-node-resolve": "^7.0.0",
