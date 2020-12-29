@@ -31,9 +31,13 @@ const main = (options)=>{
 	// }
 
 	// aqui pasaria la magia
+	
 	const sdk = {
 		auth :  {
 			firebase : services.auth.firebase(options.auth.options, context)
+		},
+		mail : {
+			gmail : services.mail.gmail(options.mail.options, context)
 		}
 	}
 
@@ -42,17 +46,3 @@ const main = (options)=>{
 }
 
 export default main
-
-// const sdk = require('@satelite/sdk')({
-// 	auth : {
-// 		cognito : {
-// 			pool : ''
-// 		},
-//		auth0 : {
-//			loquesea : ''
-//		}
-// 	},
-//	storage : {
-//		 ...
-//	}
-// });

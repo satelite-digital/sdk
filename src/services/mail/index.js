@@ -1,7 +1,7 @@
-import awsProvider from './aws/index'
+import gmailProvider from './gmail/index'
 
 export default {
-    aws : awsProvider
+    gmail : gmailProvider
 }
 
-export const aws = awsProvider
+export const gmail = gmailProvider
