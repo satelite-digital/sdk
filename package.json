@@ -1,6 +1,6 @@
 {
   "name": "@satelite/sdk",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "main": "dist/lib.cjs.js",
   "module": "dist/lib.esm.js",
   "browser": "dist/lib.umd.js",

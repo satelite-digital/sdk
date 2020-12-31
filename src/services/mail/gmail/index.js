@@ -16,5 +16,3 @@ const gmailFactory = (options, context)=>{
 }
 
 export default gmailFactory
-
-export const send = sendMethodFactory

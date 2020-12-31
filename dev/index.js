@@ -22,16 +22,32 @@ const sdkOptions = {
 
 const sdk = require('./../dist/lib.cjs.js')(sdkOptions)
 
-sdk.mail.gmail.send({
-      to: 'erick.ruano@satelite.digital',
-      subject: 'Test from sdk /dev/index.js',
-      text: 'It works!'
-})
+// sdk.mail.gmail.send({
+//       to: 'erick.ruano@satelite.digital',
+//       subject: 'Test from sdk /dev/index.js',
+//       text: 'It works!'
+// })
 
-// // SignIn service
+// SignIn service
+
 // sdk.auth.firebase.signIn({
 //     email : 'erickaleruano@gmail.com',
 //     password : 'Satelite.119922'
 // }).then(token=>{
 //     console.log('finally', token)
+// })
+
+sdk.auth.firebase.passwordResetRequest({
+    email : 'erickaleruano@gmail.com'
+}).then(results=>{
+    console.log('reset requested' , results)
+})
+
+// sdk.auth.firebase.signUp({
+//     user : 'metalshinigami@hotmail.com',
+//     pass : 'Satelite.119922'
+// }).then(result=>{
+//     console.log('created: ', result.user.tenantId)
+// }).catch((err)=>{
+//     console.log("err: ", err)
 // })
