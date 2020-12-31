@@ -8,7 +8,7 @@ import services from "./services/index"
  * 
  * Esta es la funcion factory que retorna una instancia del SDK con la configuración obtenida.
  * 
- * @param {object} options - Objeto que permite la siguiente configuracion:
+ * @param {object} config - Objeto que permite la siguiente configuracion:
  * ```
  * {
  * 	"service" : {
@@ -19,7 +19,7 @@ import services from "./services/index"
  * }
  * ```
  */
-const main = (options)=>{
+const main = (config)=>{
 	
 	// Sustituir con logica para crear SDK segun parametros enviados
 	// SDK deberia ser una clase para contener configuraciones?
@@ -34,10 +34,10 @@ const main = (options)=>{
 	
 	const sdk = {
 		auth :  {
-			firebase : services.auth.firebase(options.auth.options, context)
+			firebase : services.auth.firebase(config.auth.options, context)
 		},
 		mail : {
-			gmail : services.mail.gmail(options.mail.options, context)
+			gmail : services.mail.gmail(config.mail.options, context)
 		}
 	}
 

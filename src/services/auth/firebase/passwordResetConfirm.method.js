@@ -1,4 +1,4 @@
-export default (options, context)=>{
+export default (config, context)=>{
 
     // Initialize Firebase
     // const firebase = context.firebase.initializeApp(options);

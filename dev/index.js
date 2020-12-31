@@ -30,18 +30,18 @@ const sdk = require('./../dist/lib.cjs.js')(sdkOptions)
 
 // SignIn service
 
-// sdk.auth.firebase.signIn({
-//     email : 'erickaleruano@gmail.com',
-//     password : 'Satelite.119922'
-// }).then(token=>{
-//     console.log('finally', token)
-// })
-
-sdk.auth.firebase.passwordResetRequest({
-    email : 'erickaleruano@gmail.com'
-}).then(results=>{
-    console.log('reset requested' , results)
+sdk.auth.firebase.signIn({
+    email : 'erick.ruano@satelite.digital',
+    password : 'Hola.119922'
+}).then(token=>{
+    console.log(JSON.stringify(token))
 })
+
+// sdk.auth.firebase.passwordResetRequest({
+//     email : 'erickaleruano@gmail.com'
+// }).then(results=>{
+//     console.log('reset requested' , results)
+// })
 
 // sdk.auth.firebase.signUp({
 //     user : 'metalshinigami@hotmail.com',

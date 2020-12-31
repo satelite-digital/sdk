@@ -1,4 +1,4 @@
-export default (options, context)=>{
+export default (config, context)=>{
 
     // Initialize Firebase
     // const firebase = context.firebase.initializeApp(options);
@@ -6,7 +6,7 @@ export default (options, context)=>{
     const signUp = async (credentials)=>{    
         try{
             
-            let user = await context.firebase.auth().createUserWithEmailAndPassword(credentials.user, credentials.pass)
+            let user = await context.firebase.auth().createUserWithEmailAndPassword(credentials.email, credentials.password)
             
             return user
 

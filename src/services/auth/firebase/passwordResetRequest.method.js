@@ -1,4 +1,4 @@
-export default (options, context)=>{
+export default (config, context)=>{
     
     const passwordResetRequest = async (user)=>{   
 

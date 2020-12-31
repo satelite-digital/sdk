@@ -1,4 +1,4 @@
-export default (options, context)=>{
+export default (config, context)=>{
 
     // Initialize Firebase
     // const firebase = context.firebase.initializeApp(options);
@@ -9,10 +9,12 @@ export default (options, context)=>{
 
             let user = await context.firebase.auth().signInWithEmailAndPassword(credentials.email, credentials.password)
             
-            const token = await context.firebase.auth().currentUser.getIdToken()
+            user = await context.firebase.auth().currentUser
+
 
             return {
-                token,
+                token : await user.getIdToken(),
+                refresh_token : user.refreshToken,
                 email : credentials.email
             }
 
